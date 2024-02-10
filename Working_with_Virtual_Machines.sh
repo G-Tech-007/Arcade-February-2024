@@ -56,7 +56,7 @@ export YOUR_BUCKET_NAME=$PROJECT_ID
 echo $YOUR_BUCKET_NAME
 gcloud storage buckets create gs://$YOUR_BUCKET_NAME-minecraft-backup
 echo YOUR_BUCKET_NAME=$YOUR_BUCKET_NAME >> ~/.profile
-sudo curl https://raw.githubusercontent.com/G-Tech-007/Arcade-February-2024/main/backup.sh
+sudo curl -O https://raw.githubusercontent.com/G-Tech-007/Arcade-February-2024/main/backup.sh
 sudo chmod 755 /home/minecraft/backup.sh
 . /home/minecraft/backup.sh
 EOF_END
